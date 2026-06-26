@@ -3,179 +3,251 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="La Vie Joias — Prata 925, Moissanites e Semijoias. Olinda, PE.">
+<meta name="description" content="La Vie Joias — Alta Joalheria em Prata 925 e Moissanite. Olinda, PE.">
 <title>La Vie Joias</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #FAF7F2; --bg2: #F2EDE4; --dark: #1A1410;
-  --gold: #C9A96E; --gold-lt: #E8D5B0; --gold-dk: #8B6F3E;
-  --txt: #3D2B1A; --muted: #9A8878; --bdr: rgba(201,169,110,0.2);
+  --bg: #FAF7F2;
+  --bg2: #F2EDE4;
+  --dark: #1A1410;
+  --gold: #C9A96E;
+  --gold-lt: #E8D5B0;
+  --gold-dk: #8B6F3E;
+  --txt: #3D2B1A;
+  --muted: #9A8878;
+  --bdr: rgba(201,169,110,0.2);
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { min-height: 100%; width: 100%; }
 body {
-  background: var(--bg); font-family: 'Jost', sans-serif; font-weight: 300;
-  -webkit-font-smoothing: antialiased; display: flex; flex-direction: column;
-  align-items: center; min-height: 100vh; overflow-x: hidden; position: relative;
+  background: var(--bg);
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
 }
 body::before {
-  content: ''; position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .024;
+  content: '';
+  position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .024;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   background-size: 180px;
 }
 body::after {
-  content: ''; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  content: '';
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
   background-image: radial-gradient(circle, rgba(201,169,110,.04) 1px, transparent 1px);
   background-size: 30px 30px;
 }
+
+/* TOP BAR */
 .top-bar {
-  width: 100%; background: var(--gold-dk); text-align: center; padding: 9px 20px;
+  width: 100%; background: var(--gold-dk);
+  text-align: center; padding: 9px 20px;
   font-size: 9.5px; letter-spacing: .26em; text-transform: uppercase;
   color: rgba(250,247,242,.75); position: relative; z-index: 2;
 }
 .top-bar strong { color: var(--bg); font-weight: 500; }
+
+/* CONTAINER */
 .container {
-  width: 100%; max-width: 460px; padding: 44px 20px 60px;
-  position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center;
+  width: 100%; max-width: 460px;
+  padding: 44px 20px 60px;
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; align-items: center;
 }
+
+/* AVATAR */
 .avatar-wrap {
-  width: 82px; height: 82px; border-radius: 50%; border: 1px solid var(--bdr);
-  overflow: hidden; background: var(--bg2); margin-bottom: 18px;
+  width: 82px; height: 82px; border-radius: 50%;
+  border: 1px solid var(--bdr); overflow: hidden;
+  background: var(--bg2); margin-bottom: 18px;
   box-shadow: 0 4px 24px rgba(201,169,110,.14);
 }
 .avatar-placeholder {
-  width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
-  font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300;
-  letter-spacing: .08em; color: var(--gold); background: var(--bg2);
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px; font-weight: 300; letter-spacing: .08em;
+  color: var(--gold); background: var(--bg2);
 }
+
+/* HEADER */
 .brand-name {
-  font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300;
-  letter-spacing: .22em; color: var(--dark); margin-bottom: 5px; text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px; font-weight: 300; letter-spacing: .22em;
+  color: var(--dark); margin-bottom: 5px; text-align: center;
 }
-.brand-handle { font-size: 10.5px; font-weight: 300; letter-spacing: .14em; color: var(--muted); text-align: center; margin-bottom: 5px; }
+.brand-handle {
+  font-size: 10.5px; font-weight: 300; letter-spacing: .14em;
+  color: var(--muted); text-align: center; margin-bottom: 5px;
+}
 .brand-desc {
-  font-family: 'Cormorant Garamond', serif; font-size: 14px; font-weight: 300;
-  font-style: italic; color: var(--gold-dk); text-align: center; line-height: 1.55; margin-bottom: 32px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px; font-weight: 300; font-style: italic;
+  color: var(--gold-dk); text-align: center;
+  line-height: 1.55; margin-bottom: 32px;
 }
-.divider { display: flex; align-items: center; gap: 10px; width: 100%; margin-bottom: 22px; }
-.divider::before, .divider::after { content: ''; flex: 1; height: .5px; background: var(--bdr); }
-.div-txt { font-size: 8.5px; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); font-weight: 400; }
+
+/* DIVISOR */
+.divider {
+  display: flex; align-items: center; gap: 10px;
+  width: 100%; margin-bottom: 22px;
+}
+.divider::before, .divider::after {
+  content: ''; flex: 1; height: .5px; background: var(--bdr);
+}
+.div-txt {
+  font-size: 8.5px; letter-spacing: .3em; text-transform: uppercase;
+  color: var(--gold); font-weight: 400;
+}
+
+/* LINKS */
 .links { width: 100%; display: flex; flex-direction: column; gap: 10px; margin-bottom: 30px; }
+
 .link-item {
-  display: flex; align-items: center; gap: 14px; padding: 15px 18px;
-  background: #FFFFFF; border: .5px solid var(--bdr); text-decoration: none;
-  transition: all .28s ease; position: relative; overflow: hidden; cursor: pointer;
+  display: flex; align-items: center; gap: 14px;
+  padding: 15px 18px;
+  background: #FFFFFF;
+  border: .5px solid var(--bdr);
+  text-decoration: none;
+  transition: all .28s ease;
+  position: relative; overflow: hidden;
+  cursor: pointer;
 }
 .link-item::before {
-  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2.5px;
-  background: var(--gold); transform: scaleY(0); transition: transform .28s ease; transform-origin: bottom;
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+  width: 2.5px; background: var(--gold);
+  transform: scaleY(0); transition: transform .28s ease;
+  transform-origin: bottom;
 }
-.link-item:hover { background: var(--bg2); border-color: rgba(201,169,110,.38); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(201,169,110,.11); }
+.link-item:hover {
+  background: var(--bg2);
+  border-color: rgba(201,169,110,.38);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(201,169,110,.11);
+}
 .link-item:hover::before { transform: scaleY(1); }
+
+/* Número do link */
 .link-num {
-  width: 22px; height: 22px; border-radius: 50%; background: transparent;
-  border: .5px solid var(--bdr); display: flex; align-items: center; justify-content: center;
-  font-size: 9px; font-weight: 500; color: var(--gold); flex-shrink: 0; transition: all .28s;
+  width: 22px; height: 22px; border-radius: 50%;
+  background: transparent; border: .5px solid var(--bdr);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 9px; font-weight: 500; color: var(--gold);
+  flex-shrink: 0; transition: all .28s;
 }
-.link-item:hover .link-num { background: var(--gold); color: #fff; border-color: var(--gold); }
+.link-item:hover .link-num {
+  background: var(--gold); color: #fff; border-color: var(--gold);
+}
+
+/* Ícone */
 .link-icon {
-  width: 36px; height: 36px; border-radius: 50%; background: rgba(201,169,110,.08);
-  border: .5px solid var(--bdr); display: flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(201,169,110,.08);
+  border: .5px solid var(--bdr);
+  display: flex; align-items: center; justify-content: center;
   flex-shrink: 0; transition: background .28s;
 }
 .link-item:hover .link-icon { background: rgba(201,169,110,.18); }
+
 .link-content { flex: 1; }
-.link-label { font-size: 12.5px; font-weight: 500; letter-spacing: .04em; color: var(--dark); margin-bottom: 2px; }
-.link-sub { font-size: 10px; font-weight: 300; letter-spacing: .04em; color: var(--muted); }
-.link-arrow { color: var(--gold); opacity: .45; flex-shrink: 0; transition: opacity .28s, transform .28s; }
+.link-label {
+  font-size: 12.5px; font-weight: 500; letter-spacing: .04em;
+  color: var(--dark); margin-bottom: 2px;
+}
+.link-sub {
+  font-size: 10px; font-weight: 300; letter-spacing: .04em;
+  color: var(--muted);
+}
+.link-arrow {
+  color: var(--gold); opacity: .45; flex-shrink: 0;
+  transition: opacity .28s, transform .28s;
+}
 .link-item:hover .link-arrow { opacity: 1; transform: translateX(3px); }
-.link-primary { background: var(--gold-dk) !important; border-color: var(--gold-dk) !important; }
+
+/* Link destaque — CTA principal */
+.link-primary {
+  background: var(--gold-dk) !important;
+  border-color: var(--gold-dk) !important;
+}
 .link-primary .link-label { color: var(--bg) !important; }
 .link-primary .link-sub { color: rgba(250,247,242,.6) !important; }
-.link-primary .link-num { border-color: rgba(250,247,242,.25) !important; color: rgba(250,247,242,.7) !important; }
-.link-primary:hover .link-num { background: rgba(250,247,242,.15) !important; color: #fff !important; }
-.link-primary .link-icon { background: rgba(250,247,242,.1) !important; border-color: rgba(250,247,242,.18) !important; }
+.link-primary .link-num {
+  border-color: rgba(250,247,242,.25) !important;
+  color: rgba(250,247,242,.7) !important;
+}
+.link-primary:hover .link-num {
+  background: rgba(250,247,242,.15) !important;
+  color: #fff !important;
+}
+.link-primary .link-icon {
+  background: rgba(250,247,242,.1) !important;
+  border-color: rgba(250,247,242,.18) !important;
+}
 .link-primary .link-arrow { color: rgba(250,247,242,.6) !important; }
 .link-primary:hover { background: var(--dark) !important; border-color: var(--dark) !important; }
 .link-primary::before { background: rgba(250,247,242,.25) !important; }
 
 /* SELOS */
-.trust { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; width: 100%; margin-bottom: 36px; }
-.trust-item { display: flex; align-items: center; gap: 7px; padding: 10px 12px; background: var(--bg2); border: .5px solid var(--bdr); }
-.trust-item:last-child { grid-column: 1 / -1; justify-content: center; }
+.trust {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 8px; width: 100%; margin-bottom: 28px;
+}
+.trust-item {
+  display: flex; align-items: center; gap: 7px;
+  padding: 10px 12px;
+  background: var(--bg2); border: .5px solid var(--bdr);
+}
+.trust-item:last-child {
+  grid-column: 1 / -1; justify-content: center;
+}
 .trust-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
 .trust-txt { font-size: 9.5px; font-weight: 400; letter-spacing: .04em; color: var(--txt); }
 
-/* FEED */
-.section-block { width: 100%; margin-bottom: 36px; }
-.section-title {
-  font-size: 8.5px; letter-spacing: .3em; text-transform: uppercase;
-  color: var(--gold); font-weight: 400; text-align: center; margin-bottom: 14px;
-}
-.feed-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; }
-.feed-item {
-  aspect-ratio: 1/1; overflow: hidden; position: relative;
-  background: var(--bg2); border: .5px solid var(--bdr); cursor: pointer; display: block;
-}
-.feed-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; display: block; }
-.feed-item:hover img { transform: scale(1.06); }
-.feed-placeholder {
-  width: 100%; height: 100%; display: flex; flex-direction: column;
-  align-items: center; justify-content: center; gap: 6px; position: absolute; inset: 0;
-}
-.feed-placeholder svg { opacity: .3; }
-.feed-placeholder span { font-size: 8px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); opacity: .7; }
-.feed-overlay {
-  position: absolute; inset: 0; background: rgba(26,20,16,0);
-  transition: background .3s; display: flex; align-items: center; justify-content: center;
-}
-.feed-item:hover .feed-overlay { background: rgba(26,20,16,.3); }
-.feed-overlay svg { opacity: 0; transition: opacity .3s; }
-.feed-item:hover .feed-overlay svg { opacity: 1; }
-
-/* DEPOIMENTOS */
-.reviews-list { display: flex; flex-direction: column; gap: 10px; }
-.review-card { background: #fff; border: .5px solid var(--bdr); padding: 18px 18px 16px; position: relative; }
-.review-card::before {
-  content: '\201C'; font-family: 'Cormorant Garamond', serif; font-size: 52px;
-  line-height: 1; color: var(--gold-lt); position: absolute; top: 4px; left: 14px; pointer-events: none;
-}
-.review-stars { display: flex; gap: 2px; margin-bottom: 9px; }
-.review-stars span { color: var(--gold); font-size: 11px; }
-.review-txt {
-  font-family: 'Cormorant Garamond', serif; font-size: 14.5px; font-weight: 300;
-  font-style: italic; color: var(--txt); line-height: 1.65; margin-bottom: 12px;
-}
-.review-author { display: flex; align-items: center; gap: 9px; }
-.review-avatar {
-  width: 28px; height: 28px; border-radius: 50%; background: var(--bg2);
-  border: .5px solid var(--bdr); display: flex; align-items: center; justify-content: center;
-  font-size: 10px; font-weight: 500; color: var(--gold); flex-shrink: 0;
-}
-.review-name { font-size: 10.5px; font-weight: 500; letter-spacing: .06em; color: var(--dark); }
-.review-city { font-size: 9px; font-weight: 300; letter-spacing: .06em; color: var(--muted); margin-top: 1px; }
-
 /* INSTAGRAM */
-.insta-row { display: flex; align-items: center; gap: 8px; text-decoration: none; margin-bottom: 4px; padding: 8px 0; }
+.insta-row {
+  display: flex; align-items: center; gap: 8px;
+  text-decoration: none; margin-bottom: 4px;
+  padding: 8px 0;
+}
 .insta-txt { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 .insta-handle { font-size: 11px; letter-spacing: .08em; color: var(--gold); font-weight: 500; }
 
 /* FOOTER */
-.footer { text-align: center; padding-top: 22px; border-top: .5px solid var(--bdr); width: 100%; }
-.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 300; letter-spacing: .22em; color: var(--dark); margin-bottom: 5px; }
+.footer {
+  text-align: center; padding-top: 22px;
+  border-top: .5px solid var(--bdr); width: 100%;
+}
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px; font-weight: 300; letter-spacing: .22em;
+  color: var(--dark); margin-bottom: 5px;
+}
 .footer-sub { font-size: 9.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
 .footer-orn { color: var(--gold-lt); font-size: 11px; letter-spacing: 5px; margin-top: 10px; }
 
 /* ANIMAÇÕES */
-@keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 .fu { opacity: 0; animation: fadeUp .6s ease forwards; }
-.fu:nth-child(1){ animation-delay:.04s } .fu:nth-child(2){ animation-delay:.10s }
-.fu:nth-child(3){ animation-delay:.16s } .fu:nth-child(4){ animation-delay:.22s }
-.fu:nth-child(5){ animation-delay:.28s } .fu:nth-child(6){ animation-delay:.34s }
-.fu:nth-child(7){ animation-delay:.40s } .fu:nth-child(8){ animation-delay:.46s }
+.fu:nth-child(1){ animation-delay:.04s }
+.fu:nth-child(2){ animation-delay:.10s }
+.fu:nth-child(3){ animation-delay:.16s }
+.fu:nth-child(4){ animation-delay:.22s }
+.fu:nth-child(5){ animation-delay:.28s }
+.fu:nth-child(6){ animation-delay:.34s }
+.fu:nth-child(7){ animation-delay:.40s }
+.fu:nth-child(8){ animation-delay:.46s }
 .fu:nth-child(9){ animation-delay:.52s }
 </style>
 </head>
@@ -185,14 +257,20 @@ body::after {
 
 <div class="container">
 
-  <div class="avatar-wrap fu"><div class="avatar-placeholder">LV</div></div>
+  <!-- AVATAR + NOME -->
+  <div class="avatar-wrap fu">
+    <div class="avatar-placeholder">LV</div>
+  </div>
+
   <div class="brand-name fu">LA VIE JOIAS</div>
   <div class="brand-handle fu">@Laviejoiias · Olinda, Pernambuco</div>
   <div class="brand-desc fu">Joias que traduzem elegância em cada detalhe ✨</div>
+
   <div class="divider fu"><div class="div-txt">Acesse</div></div>
 
   <div class="links">
 
+    <!-- 1. CONSULTORA — CTA PRINCIPAL -->
     <a href="https://wa.me/5581997112402?text=Olá!%20Vim%20pelo%20perfil%20do%20Instagram%20e%20gostaria%20de%20conhecer%20as%20joias." class="link-item link-primary fu">
       <div class="link-num">1</div>
       <div class="link-icon">
@@ -207,7 +285,8 @@ body::after {
       <svg class="link-arrow" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
 
-    <a href="https://www.laviejoias.shop/" class="link-item fu">
+    <!-- 2. SITE / LOJA VIRTUAL (temporariamente redirecionando para WhatsApp) -->
+    <a href="https://wa.me/5581997112402?text=Olá!%20Vim%20pelo%20perfil%20do%20Instagram%2C%20queria%20ver%20as%20peças%20da%20loja." class="link-item fu">
       <div class="link-num">2</div>
       <div class="link-icon">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none">
@@ -222,6 +301,7 @@ body::after {
       <svg class="link-arrow" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
 
+    <!-- 3. SAC / PÓS-VENDA -->
     <a href="https://wa.me/5581995367856?text=Olá!%20Preciso%20de%20ajuda%20com%20meu%20pedido." class="link-item fu">
       <div class="link-num">3</div>
       <div class="link-icon">
@@ -238,6 +318,7 @@ body::after {
       <svg class="link-arrow" width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
 
+    <!-- 4. ENDEREÇO -->
     <a href="https://www.google.com/maps/place/7%C2%B059'34.5%22S+34%C2%B050'22.4%22W/@-7.992923,-34.839561,17z" target="_blank" class="link-item fu">
       <div class="link-num">4</div>
       <div class="link-icon">
@@ -260,50 +341,6 @@ body::after {
     <div class="trust-item"><div class="trust-dot"></div><div class="trust-txt">Moissanites Certificados</div></div>
     <div class="trust-item"><div class="trust-dot"></div><div class="trust-txt">Entrega Todo Brasil</div></div>
     <div class="trust-item"><div class="trust-dot"></div><div class="trust-txt">+1.200 Clientes</div></div>
-  </div>
-
-  <!-- DEPOIMENTOS -->
-  <div class="section-block fu">
-    <div class="section-title">✦ O que dizem nossas clientes ✦</div>
-    <div class="reviews-list">
-
-      <div class="review-card">
-        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <div class="review-txt">O colar chegou perfeito, embalagem linda e a qualidade é incrível. Parece muito mais caro do que é. Já indiquei para todas as minhas amigas!</div>
-        <div class="review-author">
-          <div class="review-avatar">C</div>
-          <div>
-            <div class="review-name">Carolayne M.</div>
-            <div class="review-city">Recife, PE</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="review-card">
-        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <div class="review-txt">Comprei o Choker Moissanite e recebi mil elogios. Todo mundo pergunta onde comprei. O brilho é absurdo — parece diamante mesmo!</div>
-        <div class="review-author">
-          <div class="review-avatar">V</div>
-          <div>
-            <div class="review-name">Vivyanne C.</div>
-            <div class="review-city">São Paulo, SP</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="review-card">
-        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-        <div class="review-txt">Já fiz mais de 4 pedidos e cada vez me surpreendo com a qualidade. A Pulseira Riviera Tennis é minha favorita!</div>
-        <div class="review-author">
-          <div class="review-avatar">C</div>
-          <div>
-            <div class="review-name">Cinthya A.</div>
-            <div class="review-city">Fortaleza, CE</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
   </div>
 
   <!-- INSTAGRAM -->
@@ -329,13 +366,16 @@ body::after {
 <script>
 const io = new IntersectionObserver(e => {
   e.forEach(en => {
-    if (en.isIntersecting) { en.target.style.animationPlayState = 'running'; io.unobserve(en.target); }
+    if (en.isIntersecting) {
+      en.target.style.animationPlayState = 'running';
+      io.unobserve(en.target);
+    }
   });
 }, { threshold: .1 });
-document.querySelectorAll('.fu').forEach(el => { el.style.animationPlayState = 'paused'; io.observe(el); });
-
-// Para adicionar fotos: insira o img dentro do feed-item antes do feed-overlay
-// Exemplo: document.getElementById('f1').insertAdjacentHTML('afterbegin','<img src="URL_DA_FOTO" alt="joia">');
+document.querySelectorAll('.fu').forEach(el => {
+  el.style.animationPlayState = 'paused';
+  io.observe(el);
+});
 </script>
 </body>
 </html>
